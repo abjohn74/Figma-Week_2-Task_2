@@ -1,0 +1,719 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+:root{
+    --navbar-BackgrounColor:rgba(15, 23, 56, 1);
+    --font-size-14px:0.875rem;
+}
+
+#layout{
+   display: flex;
+  
+}
+
+.pointer{
+    cursor: pointer;
+    width: auto;
+    height: auto;
+}
+
+.border-0{
+    border: none;
+}
+
+.transparent{
+    background-color: transparent;
+}
+#showMore{
+    background-color: var(--navbar-BackgrounColor);
+    width: 2.5rem;
+    padding: 1rem 0.5rem;
+}
+/* Side NavBar Desigin */
+.side-navBar{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    flex: 1 1 18.3rem;
+    background-color: var(--navbar-BackgrounColor);
+    padding-inline: 1.1rem;
+}
+.nav-bar-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+.navBar-heading{
+    display: flex;
+    justify-content: space-between;
+    padding-block: 1rem;
+    color: white;
+    font-size: 1.25rem;
+}
+.navBar-brand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drop-down{
+    width: 9.93rem;
+    height: 2rem;
+    /* border: orange 1px solid; */
+    display: flex;
+    align-items: center;
+    overflow-y: hidden;
+    width: 100%;
+}
+.drop-down-option{
+    background-color: b;
+    & li{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: var(--font-size-14px);
+        margin-bottom: 0.2rem;
+        color: white;
+    }
+}
+
+.nav-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    padding-block: 0.3125rem;
+    & a{
+        flex: 1;
+        height: 2.75rem;
+        padding: 0.625rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: var(--font-size-14px);
+        font-weight: 400;
+        text-decoration: none;
+        color: white;
+        border-radius: 0.5rem;
+        & span{
+            width: 1.68rem;
+            height: 1.5rem;
+            background-color: rgba(226, 105, 48, 1);
+            border-radius: 0.375rem;
+            text-align: center;
+            padding-top: 0.2rem;
+        }
+    }
+}
+
+/* Add css Programatticly if any of them have active links */
+.highlight-navLinks{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.notification-logout-option{
+    padding: 1.6125rem 0.625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    & a{
+        position: relative;
+        flex: 1;
+        width: 100%;
+        height: 2.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: var(--font-size-14px);
+        font-weight: 400;
+        text-decoration: none;
+        color: white;
+        border-radius: 0.5rem;
+        & span{
+            text-align: center;
+            padding-top: 0.2rem;
+        }
+    }
+
+}
+.login-face-icon{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+.three-dots::after{
+  content: url('./Icon/expand_more_3dots.svg');
+  position: absolute;
+  right: 0;
+  
+}
+
+
+/* DashBoard Conatiner Desigin*/
+.dashboard{
+    flex: 2;
+    flex-basis: 26.3rem;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-evenly;
+    gap: 2rem;
+    
+    width: 100%;
+    padding:1.4rem 2.5rem;
+    background-color: rgba(248, 249, 255, 1);
+}
+
+/* Welcoming Message */
+.welcoming-quote{
+    
+    flex: 1;
+    & h2{
+        font-size: 1.625rem;
+        font-weight: 400;
+        & span{
+            font-weight: 500;
+            & img{
+                margin-right: 1.25rem;
+            }
+        }
+    }
+    & p{
+        color: rgba(106, 106, 109, 1);
+    }
+}
+
+.document-status-container{
+    position: relative;
+    margin-top: 1.18rem;
+   /* width: 21.437rem; */
+    gap: 1.2rem;
+    flex: 1;
+    background-image: linear-gradient(to right,rgba(123, 146, 248, 1),rgba(255, 147, 147, 1));
+    border-radius: 1rem;
+    padding: 1.625rem;
+    display: flex;
+    width: 100%;
+
+}
+/* To Position the decoration Star */
+.star{
+    position: absolute;
+    top: 25%;
+    right: 4%;
+}
+.document-status-container>h2{
+    max-width: 10.125rem;
+    margin-left: auto ;
+    font-size: var(--font-size-14px);
+    font-weight: 300;
+    line-height: 1.12rem;
+    & .documents-span1{
+        font-weight: 500;
+    }
+
+    & .documents-span2{
+        font-size: 1.25rem;
+        line-height: 1.625rem;
+        font-weight: 600;
+    }
+}
+.horizontal-line{
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.document-status-container>p{
+    position: relative;
+    & img{
+        position: absolute;
+        right: 0;
+        bottom: 5%;
+    }
+}
+
+.card-checked{
+    position: absolute;
+    top: -1.18rem;
+    left: 0.937rem;
+}
+
+.gradient-rectangle-2{
+    flex: 1;
+    background-image: linear-gradient(to right,rgba(38, 58, 139, 1),rgba(26, 33, 63, 1));
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.8rem;
+    align-items: center;
+    padding: 1.6rem;
+    /* margin: 0 auto; */
+    width: 100%;
+}
+
+
+.doughnut-chart-container {
+    position: relative;
+    width: 8.75rem;
+    height: 8.8rem;
+}
+
+.doughnut-chart {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;  
+}
+
+#doughnut-chart-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8725rem;
+    text-align: center;
+    color: white;
+}
+
+.doughnut-chart::before {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    background-image: linear-gradient(to right,rgba(38, 58, 139, 1),rgba(26, 33, 63, 1));;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.color-indicator{
+    display: block;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 50%;
+    background-color: aqua;
+}
+.application-status-content{
+    list-style: none;
+    display: flex;
+    width: max-content;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 0.8125rem;
+    font-weight:400 ;
+    color: white;
+}
+
+
+.mailbox-overview{
+ 
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.mailbox-header{
+   & h3{
+    /* To accomadte the a tag*/
+    width: fit-content;
+    display: inline;
+      font-size: 1.375rem;
+      font-weight: 500;
+      color: rgba(30, 31, 33, 1);
+   }
+   & a{
+    /* font-size: 0.875rem; */
+    font-size: var(--font-size-14px);
+    font-weight: 500;
+       color: rgba(81, 91, 174, 1);
+      text-decoration: underline;
+   }
+
+   & p{
+    font-size: var(--font-size-14px);
+    /* font-size: 0.875rem; */
+    font-weight: 400;
+    color: rgba(30, 31, 33, 1);
+   }
+}
+.mailbox-status-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.4rem;
+}
+.mailbox-status{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.horizontal-line{
+  border: 1px solid rgba(201, 206, 233, 1);
+}
+
+.status-title{
+    /* font-size: 0.875rem; */
+    font-size: var(--font-size-14px);
+    color: rgba(106, 106, 109, 1);
+    font-weight: 400;
+}
+#status-count-actionsTaken,#status-count-requested,#status-count-new{
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: rgba(30, 31, 33, 1);
+}
+
+/* Task Container -Section-3 Design */
+.task-container{
+    flex: 3;
+    flex-basis:45.25rem ;
+    width: 100%;
+    padding:0 2.5rem;
+    padding-block:1.4rem 5.625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2.5rem;
+}
+/* Styles for the text heading Conatiner and its inside elements */
+.task-container-heading{
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    font-family: 'Inter';
+    & h2{
+        font-size: 1.375rem;
+        font-weight: 500;
+        color: rgba(30, 31, 33, 1);
+    }
+    & a{
+        /* font-size: 0.875rem; */
+        font-size: var(--font-size-14px);
+        color: rgba(81, 91, 174, 1);
+    }
+}
+
+/* To High the selected button */
+.selectedButton{
+    position: relative;
+}
+.selectedButton::after{
+    content: '';
+    position: absolute;
+    bottom:-80%;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 0.2rem;
+    background-color: rgba(15, 23, 56, 1);
+}
+.task-filters{
+    display: flex;
+    padding-block: 0.8rem;
+    gap: 4.8725rem;
+    border-bottom: 1px solid rgba(223, 226, 242, 1);
+}
+.task-filters button{
+    width: auto;
+}
+
+.table-container{
+    border: 1px solid rgba(229, 233, 255, 1);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border-top-right-radius: 0.5rem;
+    margin-top: 1.3215rem;
+}
+
+table{
+    /* border: 1px green solid; */
+    width: 100%;
+    padding: 0.2rem;
+    border-collapse: collapse; 
+    /* border: 2px solid rgba(229, 233, 255, 1); */
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+thead{
+    background-color: rgba(248, 249, 252, 1);
+    overflow: hidden;
+}
+
+th{
+    padding-block: 1.125rem;
+    padding-inline: 0.625rem 0;
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: rgba(106, 106, 109, 1);
+}
+
+td{
+   padding:0.5rem 0.625rem ;
+   font-size: 0.875rem;
+   font-weight: 400;
+   padding-block: 1rem;
+   /* border-bottom: 1px red solid; */
+   
+}
+/* To Style the button Which Show Status */
+.status-button{
+   padding: 0.25rem 0.25rem;
+   font-size: 0.75rem;
+   font-weight: 500;
+   border-radius: 1.5rem;
+   width: max-content;
+   background-color: rgba(241, 241, 245, 1);
+   border: 1px solid rgba(206, 206, 209, 1);
+}
+
+.task-title {
+    font-family: 'Inter';
+    font-family: 400;
+     white-space: nowrap;  /*     Prevent text wrapping */
+    overflow: hidden;          /* Hide overflow content */
+    text-overflow: ellipsis;   /* Show ellipsis (...) for overflowing text */
+    width: 15rem;           /* Constrain the width of the cell */
+    display:inline-block; 
+    /* margin-top: auto;   */
+}
+
+
+tr:not(:nth-of-type(1)){
+    border: 1px solid rgba(229, 233, 255, 1);
+}
+
+
+/* For the Table Payment */
+.payment-history-table{
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+#payment-table-body  td:nth-of-type(1){
+    font-weight: 600;
+    font-size: var(--font-size-14px);
+    color: rgba(30, 31, 33, 1);
+}
+
+#payment-table-body td:not(:nth-child(1))
+{ 
+    font-weight: 400;
+    font-size: var(--font-size-14px);
+    color: rgba(30, 31, 33, 1);
+
+}
+
+table{
+    font-family: 'Inter';
+}
+
+@media(max-width:750px){
+    #layout{
+        flex-direction: column;
+     }
+        #showMore{
+      display: none;
+        }
+     /* Side NavBar Desigin */
+    .side-navBar{
+    display: flex;
+    width: 100%;
+    flex: 1;
+     }
+
+     .notification-logout-option{
+         display: none;
+        }
+        .company-info-container{
+            display: none;    
+        }
+        
+        .dashboard{
+           padding:1rem;
+           gap: 1rem;
+           background-color: rgba(248, 249, 255, 1);
+       }
+
+       .welcoming-quote{
+        & h2{
+            font-size: 1.375rem;
+            font-weight: 400;
+            & span{
+                font-weight: 500;
+            }
+        }
+    }
+    .document-status-container{
+        position: relative;
+        margin-top: 1.18rem;
+        flex: 1;
+        gap: 1.2rem;
+        background-image: linear-gradient(to right,rgba(123, 146, 248, 1),rgba(255, 147, 147, 1));
+        border-radius: 1rem;
+        padding: 1.625rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;  
+    }
+    
+    .document-status-container>h2{
+        max-width: 10.125rem;
+        margin-left: auto ;
+        font-size: var(--font-size-14px);
+        font-weight: 300;
+        line-height: 1.12rem;
+        & .documents-span1{
+            font-weight: 500;
+        }
+    
+        & .documents-span2{
+            font-size: 1.25rem;
+            line-height: 1.625rem;
+            font-weight: 600;
+        }
+    }
+
+    .task-container-heading{
+        justify-content: space-between;
+        & h2{
+            font-weight: 600;
+        }
+       
+    }
+    
+
+.task-container{
+    padding: 0.625rem;
+}
+
+.task-filters{
+    width: max-content;
+}
+
+/* For the table Desigin */
+tr{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding-block: 1.5rem;
+   }
+
+   /* Style for not displaying the table heading */
+   #TaskTableHeading,#PayementTableHeading{
+    display: none;
+   }
+
+    #task-body td:not(.task-title){
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        padding:0.1rem 1.2em ;
+        font-size: 0.8725rem;
+        width: max-content;
+        font-weight: 500;
+        color: rgba(30, 31, 33, 1);
+     }
+     
+
+
+
+.task-title {
+    padding-block: 1rem;
+    width: 80%;
+    font-weight: 600;
+}
+
+/* To Provide Label to the td on Mobile Screen */
+    #task-body td:nth-of-type(2)::before{
+        content: 'Category';
+        font-weight: 400;
+        color: rgba(106, 106, 109, 1);
+    }
+    #task-body td:nth-of-type(3)::before{
+        content: 'Due date';
+        font-weight: 400;
+        color: rgba(106, 106, 109, 1);
+    }
+    #task-body td:nth-of-type(4)::before{
+        content: 'Status';
+        font-weight: 400;
+        color: rgba(106, 106, 109, 1);
+    }
+
+    /* Payement Table Desigin */
+
+       #payment-table-body tr {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative;
+       }
+       
+       #payment-table-body tr{
+        gap: 0.6rem;
+       }
+
+       #payment-table-body td:nth-child(1){
+            order: 1;
+            font-size: 1rem;
+            font-weight: 500;
+            width: 68%;
+       }
+/* to select the Price Element */
+       #payment-table-body td:nth-child(3){
+          font-size: 1rem;
+          font-weight: 600  ;
+          color:rgba(30, 31, 33, 1);
+          order: 2;
+          display: flex;
+          align-items: center;
+       }
+    
+  
+       /* to make the date appera jus below the transcation id */
+       #payment-table-body td:nth-child(2){
+         position: absolute;
+         top: 2.2rem;
+         padding-block: 1.5rem;
+       }
+      
+
+       #payment-table-body .expand-more::after{
+        content: url('./Icon/black-upArrow.svg');
+        width: 0.5rem;
+        cursor: pointer;
+        padding-inline: 0.4rem;
+
+       }
+
+       #payment-table-body .expand-more::after[data-icon="up"]::after {
+        content:'nh'; /* Example of another content change */
+        transform: rotate(90deg);
+    }
+    #payment-table-body .expand-more::after[data-icon="down"]::after {
+        content: '►'; /* Example of another content change */
+    }
+    
+     #payment-table-body td:nth-child(4){
+        order: 4;
+        display: none;
+        flex-direction: column;
+        gap: 0.25rem;
+        font-size: var(--font-size-14px);
+        font-weight: 600;
+    }
+    #payment-table-body td:nth-child(4)::before{
+        content: 'Description';
+        font-weight: 400;
+        color: rgba(106, 106, 109, 1);
+    }
+
+}

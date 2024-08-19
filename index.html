@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin DashBoard</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <!-- Container for the entire layout -->
+     <div id="layout">
+        
+        <div id="showMore">
+            <img src="./Icon/hamburger.svg" width="19" height="19" alt="hamburger-menu">
+         </div>
+
+        <div class="side-navBar">
+            <!-- NavBar-Container -->
+           
+            <div class="nav-bar-container">
+                <div class="navBar-heading">
+                    <div class="navBar-brand">
+                        <img src="./Icon/grain.png"  width="26" height="26" alt="Brand-Logo">
+                        <p>E-Dashboard</p>
+                    </div>
+                    <img src="./Icon/menu_open.png" alt="Menu Open Icon" class="menu-icon" width="24" height="24">
+                </div>
+                <!-- Dropdowns with image identifications -->
+                <div class="company-info-container">
+                    <div >
+                        <div class="drop-down">
+                          <ul class="drop-down-option">
+                              <li><img src="./Icon/company1.png" alt="company-icon" width="32" height="32">Alphalinx inc.</li>
+                              <li><img src="./Icon/company1.png" alt="company-icon" width="32" height="32">Alphalinx PVT.</li>
+                              <li><img src="./Icon/company1.png" alt="company-icon" width="32" height="32">Alphalinx EU</li>
+                          </ul>
+                          <img src="./Icon/arrow_drop_down.png" alt="expand_more-Icon" class="pointer" width="24" height="24">
+                        </div>
+                  </div>
+                  <!-- Menu Items -->
+                  <div class="nav-menu">
+                       <a href="#" class="nav-link-items">
+                          <img src="./Icon/widgets.png" alt="DashBoard-Icon" width="24" height="24">
+                          DashBoard
+                       </a>
+                       <a href="#"  class="nav-link-items">
+                          <img src="./Icon/add_chart.png" width="24" height="24" alt="My Business">My Business
+                          <img src="./Icon/arrow_drop_down.png" class="pointer" width="24" height="24" alt="expand-more">
+                       </a>
+                       <a href="#"  class="nav-link-items">
+                          <img src="./Icon/request_quote.png" width="24" height="24" alt="Finacial Resources">Finacial Resources
+                          <img src="./Icon/arrow_drop_down.png" class="pointer" width="24" height="24" alt="expand-more">
+                       </a>
+                       <a href="#"  class="nav-link-items">
+                          <img src="./Icon/unsubscribe.png" width="24" height="24" alt="Mailbox">Mailbox
+                       </a> 
+                       <a href="#"  class="nav-link-items">
+                           <img src="./Icon/airplane_ticket.png"  width="24" height="24" alt="Visa-Center">Visa-Center
+                          </a>
+                          <a href="#"  class="nav-link-items">
+                             <img src="./Icon/quiz.png" width="24" height="24" alt="Complainces">Complainces <span id="complainceNumber">02</span>
+                          </a>
+                  </div>
+                </div>
+               
+            </div>
+
+            <!-- Logout Option-Container -->
+             <div class="notification-logout-option">
+                    <a href="#"><img src="./Icon/notifications.png" width="24" height="24" alt="Notication-Icon">Notication-Icon</a>
+                    <a href="#" class="three-dots"><img src="./Icon/help.png"   width="24" height="24" alt="Help Center">Help Center</a>
+                    <a href="#" class="three-dots">
+                        <img src="./Icon/company.png"  width="24" height="24" alt="login-person-icon"> <p>
+                        <span>Jacobe James</span>
+                        <span>Jacobejames@gmail.com</span>
+                    </p></a>
+             </div>
+        </div>
+        <!-- DashBoard Settings -->
+        <div class="dashboard">
+                <div class="welcoming-quote">
+                    <h2 >Good morning,<span> Emily! <img src="./Icon/image 113.png" width="30" height="30"> </span></h2>
+                    <p>Welcome back!</p>
+                </div>
+                
+                <div class="document-status-container">
+                    <img src="./Icon/Card-check.svg" width="87" height="99" alt="Card-Checked" class="card-checked">
+                      <h2>All your <span class="documents-span1">documents</span> are <span  class="documents-span2">up to date!</span></h2>
+                      <!-- Horizontal Line -->
+                       <img src="./Icon/auto_awesome.png" width="31" height="31" alt="decoration-star" class="star">
+                      <span class="horizontal-line"></span>
+                        <p>
+                            You have 3 upcoming document updates in January.
+                            <img src="./Icon/Group 764410.png" width="21" height="21" class="next-button" alt="next-button Svg">
+                        </p>
+                </div>
+
+
+                <div class="gradient-rectangle-2">
+                    <!-- Container for Doughnut Chart and its description -->
+                    <div class="doughnut-chart-container">
+                        <div class="doughnut-chart" id="doughnutChart"></div>
+                          <!-- Text indicating what the chart represents -->
+                        <div id="doughnut-chart-text">Applications</div>
+                    </div>
+                     <!-- List displaying application statuses -->
+                    <ul class="application-status">
+                        <!-- Individual status item with color indicator -->
+                        <li class="application-status-content"><span class="color-indicator">  </span> Incomplete</li>
+                        <li class="application-status-content"><span class="color-indicator"></span>Pending approval</li>
+                        <li class="application-status-content"><span class="color-indicator"></span>Approved</li>
+                    </ul>
+                </div>
+
+                <div class="mailbox-overview">
+                     <!-- Main container for the entire mailbox overview section -->
+                       <div class="mailbox-header">
+                         <!-- Container for the mailbox heading and description -->
+                        <h3>Mailbox </h3> <a class="pointer">View all</a>
+                        <p>Check on your all your mail in one go.</p>
+                       </div>
+                       <div  class="mailbox-status-container">
+                            <!-- Container for all the mailbox status items (New, Requested, Actions Taken) -->
+                          <div class="mailbox-status">
+                            <img src="./Icon/Group 764328.png" width="27" height="27" alt="Message-Tick">
+                            <p class="status-title">New</p>
+                            <p  id="status-count-new">23</p>
+                          </div>
+                          <span class="horizontal-line"></span>
+                          <div  class="mailbox-status">
+                            <img src="./Icon/Group 764329.png" width="27" height="27" alt="Requested-Message">
+                            <p class="status-title">Requested</p>
+                            <p  id="status-count-requested">23</p>
+                          </div>
+                          <!-- Horizontal Space -->
+                          <span class="horizontal-line"></span>
+
+                          <div  class="mailbox-status">
+                            <img src="./Icon/Group 764331.png" width="27" height="27" alt="Alert-Button">
+                            <p class="status-title">Actions Taken</p>
+                            <p  id="status-count-actionsTaken">23</p>
+                          </div>
+                       </div>
+                </div>
+<!-- Second one -->
+                <div class="mailbox-overview">
+                    <!-- Main container for the entire mailbox overview section -->
+                      <div class="mailbox-header">
+                        <!-- Container for the mailbox heading and description -->
+                       <h3>Legal compliance </h3> <a class="pointer">View all</a>
+                       <p>Keep your requirements up to date.</p>
+                      </div>
+                      <div  class="mailbox-status-container">
+                           <!-- Container for all the mailbox status items (New, Requested, Actions Taken) -->
+                         <div class="mailbox-status">
+                           <img src="./Icon/Group 764328.png" width="27" height="27" alt="Message-Tick">
+                           <p class="status-title">Reminders</p>
+                           <p  id="status-count-new">23</p>
+                         </div>
+                         <span class="horizontal-line"></span>
+                         <div  class="mailbox-status">
+                           <img src="./Icon/Group 764329.png" width="27" height="27" alt="Requested-Message">
+                           <p class="status-title">In progress</p>
+                           <p  id="status-count-requested">23</p>
+                         </div>
+                         <span class="horizontal-line"></span>
+
+                         <div  class="mailbox-status">
+                           <img src="./Icon/Group 764331.png" width="27" height="27" alt="Alert-Button">
+                           <p class="status-title">To approve</p>
+                           <p  id="status-count-actionsTaken">23</p>
+                         </div>
+                      </div>
+               </div>
+
+                
+                  
+        </div>
+
+        <div class="task-container">
+                <div  class="task-section">
+                     <!-- Task Header Container -->
+                    <div class="task-container-heading ">
+                        <h2>Tasks</h2>
+                        <a href="" class="pointer">View All</a>
+                    </div>
+                      <!-- Task Filter Buttons -->
+                    <div class="task-filters">
+                        <button class="border-0 transparent pointer selectedButton buttons">My Task</button>
+                        <button  class="border-0 transparent pointer buttons">OverDue</button>
+                        <button  class="border-0 transparent pointer buttons">Assigined By Me</button>
+                    </div>
+                
+                 <!-- Task Table Container -->
+                <div class="table-container">
+                      <!-- Table displaying task-related data -->
+                        <table  class="task-table">
+                            <thead>
+                                <tr id="TaskTableHeading">
+                                    <th>Task</th>
+                                    <th>Category</th>
+                                    <th>Due date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody  id="task-body">
+                                    <tr>
+                                        <td  class="task-title">Update Tax Document for Alphalinx Lorem, ipsum  </td>
+                                        <td >Compliance</td>
+                                        <td>23/11/23</td>
+                                        <td><button class="status-button pointer" >Request sent</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class=" task-title">Update KYC document </td>
+                                        <td>Compliance</td>
+                                        <td>23/11/23</td>
+                                        <td ><button class="status-button pointer">Request sent</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class=" task-title">Add clearer photo for visa application</td>
+                                        <td>Visa center</td>
+                                        <td>23/11/23</td>
+                                        <td><button class="status-button pointer">Pending action</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class=" task-title">Add clearer photo for visa application</td>
+                                        <td>Visa center</td>
+                                        <td>23/11/23</td>
+                                        <td><button class="status-button pointer">Pending action</button></td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+
+            <!-- Payement History Table -->
+            <div class="payment-history-table">          
+                    <div class="task-container-heading">
+                        <h2>Payment history</h2>
+                        <a href="" class="pointer">View All</a>
+                    </div>
+                               
+                <!-- Table  for deisplaying the Payement Related Data-->
+                <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr id="PayementTableHeading">
+                                    <th>Transaction ID</th>
+                                    <th>Date of transaction</th>
+                                    <th class="expand-more">Amount</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody id="payment-table-body">
+                                    <tr>
+                                        <td >#764657758  </td>
+                                        <td >23/01/19</td>
+                                        <td class="expand-more">$5.99</td>
+                                        <td>Mailbox</td>
+                                    </tr>
+                                    <tr>
+                                        <td >#764657758</td>
+                                        <td >23/01/19</td>
+                                        <td class="expand-more">$5.99</td>
+                                        <td>Registration (upgrade)</td>
+                                    </tr>
+                                    <tr>
+                                        <td >#764657758</td>
+                                        <td >23/01/19</td>
+                                        <td class="expand-more">$5.99</td>
+                                        <td>Mailbox</td>
+                                    </tr>
+                                    <tr>
+                                        <td >#764657758</td>
+                                        <td >23/01/19</td>
+                                        <td class="expand-more">$5.99</td>
+                                        <td>Mailbox</td>
+                                    </tr>
+                                    <tr>
+                                        <td >#764657758</td>
+                                        <td >23/01/19</td>
+                                        <td class="expand-more">$5.99</td>
+                                        <td>Mailbox</td>
+                                    </tr>
+                                    <tr>
+                                        <td >#764657758</td>
+                                        <td >23/01/19</td>
+                                        <td class="expand-more">$5.99</td>
+                                        <td>Mailbox</td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                </div> 
+            </div>
+        </div>
+     </div>
+     <script src="./Script.js"></script>
+</body>
+</html>
